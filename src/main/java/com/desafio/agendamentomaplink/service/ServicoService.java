@@ -21,6 +21,7 @@ public class ServicoService extends BaseService {
         this.servicoRepository = servicoRepository;
     }
 
+    @Transactional(Transactional.TxType.NOT_SUPPORTED)
     public List<ServicoDTO> listarTodos(){
         return servicoRepository.findAll()
                 .stream().map(servico -> getConverter().map(servico, ServicoDTO.class))

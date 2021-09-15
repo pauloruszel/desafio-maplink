@@ -5,6 +5,7 @@ import com.desafio.agendamentomaplink.repository.AgendamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,13 +19,14 @@ public class AgendamentoService extends BaseService {
         this.agendamentoRepository = agendamentoRepository;
     }
 
+    @Transactional(Transactional.TxType.NOT_SUPPORTED)
     public List<AgendamentoDTO> listarTodos(){
         return agendamentoRepository.findAll()
                 .stream().map(agendamento -> getConverter().map(agendamento, AgendamentoDTO.class))
                 .collect(Collectors.toList());
     }
 
-
+    @Transactional(Transactional.TxType.NOT_SUPPORTED)
     public List<AgendamentoDTO> listarTodosAgrupadosPorDataEValor(){
         return agendamentoRepository.findAllGroupByDataHoraAndServicoValor()
                 .stream().map(agendamento -> getConverter().map(agendamento, AgendamentoDTO.class))
