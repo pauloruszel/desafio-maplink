@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Objects;
 
+import static java.util.Objects.isNull;
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.ResponseEntity.*;
 import static org.springframework.http.ResponseEntity.status;
@@ -45,7 +46,7 @@ public class ServicoResource {
     public ResponseEntity<ServicoDTO> update(@PathVariable("id") long id,
                                              @RequestBody ServicoDTO servicoDTO) {
         ServicoDTO retorno = servicoService.update(id, servicoDTO);
-        if (!Objects.isNull(retorno)) {
+        if (!isNull(retorno)) {
             return ok().body(retorno);
         } else {
             return notFound().build();

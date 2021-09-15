@@ -1,12 +1,15 @@
 package com.desafio.agendamentomaplink.domain.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @AttributeOverride(name = "id", column = @Column(name = "idAgendamento", unique = true, nullable = false, length = 4, precision = 10))
 @Table(name = "TB_Agendamento")

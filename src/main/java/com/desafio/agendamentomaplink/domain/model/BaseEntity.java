@@ -1,12 +1,15 @@
 package com.desafio.agendamentomaplink.domain.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @MappedSuperclass
 public abstract class BaseEntity implements Serializable {
 
