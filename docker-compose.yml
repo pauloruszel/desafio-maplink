@@ -1,0 +1,9 @@
+version: '2'
+services:
+  agendamento-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: agendamento:latest
+    ports:
+      - "8080:8080"
