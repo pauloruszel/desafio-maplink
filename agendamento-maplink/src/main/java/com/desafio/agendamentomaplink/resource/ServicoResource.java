@@ -36,15 +36,15 @@ public class ServicoResource {
     }
 
     @PostMapping
-    public ResponseEntity<ServicoDTO> salvar(@Valid @RequestBody ServicoDTO clienteDTO) {
-        ServicoDTO retorno = servicoService.salvar(clienteDTO);
+    public ResponseEntity<ServicoDTO> salvar(@Valid @RequestBody ServicoDTO servicoDTO) {
+        ServicoDTO retorno = servicoService.salvar(servicoDTO);
         return status(CREATED).body(retorno);
     }
 
     @PutMapping("/{id:[1-9][0-9]*}")
     public ResponseEntity<ServicoDTO> update(@PathVariable("id") long id,
-                                             @RequestBody ServicoDTO clienteDTO) {
-        ServicoDTO retorno = servicoService.update(id, clienteDTO);
+                                             @RequestBody ServicoDTO servicoDTO) {
+        ServicoDTO retorno = servicoService.update(id, servicoDTO);
         if (!Objects.isNull(retorno)) {
             return ok().body(retorno);
         } else {
@@ -55,7 +55,7 @@ public class ServicoResource {
     @DeleteMapping("/{id:[1-9][0-9]*}")
     public ResponseEntity <?> deletar(@PathVariable long id) {
         return servicoRepository.findById(id)
-                .map(cliente -> {
+                .map(servico -> {
                     servicoRepository.deleteById(id);
                     return ok().build();
                 }).orElse(notFound().build());

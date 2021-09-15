@@ -29,8 +29,8 @@ public class ServicoService extends BaseService {
 
     @Transactional
     public ServicoDTO salvar(final ServicoDTO dto) {
-        final Servico cliente = getConverter().map(dto, Servico.class);
-        Servico retorno = servicoRepository.save(cliente);
+        final Servico servico = getConverter().map(dto, Servico.class);
+        Servico retorno = servicoRepository.save(servico);
         return getConverter().map(retorno, ServicoDTO.class);
     }
 
