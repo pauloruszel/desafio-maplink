@@ -1,10 +1,13 @@
-# Bem-vindo ao AgendamentoApp
+# Bem-vindo ao AgendamentoApp - API
 Serviço responsável por cadastrar agendamentos de serviços para clientes
+
+- [X] Backend - API Rest
+- [ ] Frontend
 
 # Ambiente de desenvolvimento
 Existem alguns passos para execução do projeto em ambiente local, necessário que alguns programas estejam corretamente instalados.
 
-Framework/lib	| Versão Recomendada | S.O Utilizado
+Framework/lib | Versão Recomendada | S.O Utilizado
 --- | --- | ---
 Maven	| 3.6.3	| Windows
 JDK	| 8	| Windows
