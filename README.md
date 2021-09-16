@@ -16,7 +16,7 @@ Intellij	| -	| Windows
 ### Passo 1
 Faça o clone do projeto
 ```shell script
-$ git clone https://github.com/Maikoncanuto/mcp-ml.git agendamentoapp
+$ git clone https://github.com/pauloruszel/desafio-maplink.git agendamentoapp
 ```
 ### Passo 2
 Entre na pasta raiz do projeto
