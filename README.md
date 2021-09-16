@@ -1,4 +1,4 @@
-# Bem-vindo ao AgendamentoApp - API
+# :calendar: Bem-vindo ao AgendamentoApp :alarm_clock:
 Serviço responsável por cadastrar agendamentos de serviços para clientes
 
 - [X] Backend - API Rest
