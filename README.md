@@ -27,7 +27,7 @@ Entre na pasta raiz do projeto
 ```shell script
 $ cd agendamentoapp
 ```
-### Passo 3 (opcional, já contém o target)
+### Passo 3
 Executar o comando do maven para gerar o artefato que será publicado no docker
 ```shell script
 $ cd mvn clean install
