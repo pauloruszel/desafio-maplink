@@ -23,7 +23,7 @@ public class Cliente extends BaseEntity {
 
     @CPF
     @NotBlank
-    @Size(max = 11)
-    @Column(name = "cpf", length = 11, nullable = false)
+    @Size(max = 14)
+    @Column(name = "cpf", length = 14, nullable = false)
     private String cpf;
 }
